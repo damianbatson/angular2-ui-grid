@@ -1,0 +1,25 @@
+<p>
+  about works!
+</p>
+<hr/>
+
+<app-grid2></app-grid2>
+
+<form #form="ngForm" (submit)="logForm(form.value)">
+  <label>Firstname:</label>
+  <input type="text" name="firstname" required ngModel>
+
+  <label>Lastname:</label>
+  <input type="text" name="lastname" required  ngModel>
+
+  <label>Street:</label>
+  <input type="text" name="street" ngModel>
+
+  <label>Zip:</label>
+  <input type="text" name="zip" ngModel>
+
+  <label>City:</label>
+  <input type="text" name="city" ngModel>
+
+  <button [disabled]="!form.valid" type="submit">Submit</button>
+</form>
